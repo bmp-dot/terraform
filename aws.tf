@@ -11,7 +11,7 @@ provider "aws" {
 
 
 resource "aws_security_group" "instance" {
-  name = "terraform-example-instance"
+  name = "terraform-example-instance-cloud"
   ingress {
     from_port   = var.server_port
     to_port     = var.server_port
@@ -35,7 +35,7 @@ resource "aws_instance" "example" {
               EOF
 
   tags = {
-        Name = "terraform-example"
+        Name = "terraform-example-cloud"
 }
 
 }
